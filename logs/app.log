@@ -1,0 +1,1513 @@
+2025-02-20 18:33:01,011 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.UndefinedColumn) column "phone" of relation "orders" does not exist
+LINE 1: INSERT INTO orders (phone, order_method, full_name, offer_id...
+                            ^
+
+[SQL: INSERT INTO orders (phone, order_method, full_name, offer_id, region, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone': '9989000000909', 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 33, 0, 792369), 'updated_at': datetime.datetime(2025, 2, 20, 13, 33, 0, 792369)}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 18:33:01,011 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.UndefinedColumn) column "phone" of relation "orders" does not exist
+LINE 1: INSERT INTO orders (phone, order_method, full_name, offer_id...
+                            ^
+
+[SQL: INSERT INTO orders (phone, order_method, full_name, offer_id, region, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone': '9989000000909', 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 33, 0, 792369), 'updated_at': datetime.datetime(2025, 2, 20, 13, 33, 0, 792369)}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 18:34:12,340 - app.routers.orders - ERROR - Error creating order: 'OrderCreate' object has no attribute 'orderMethod'
+2025-02-20 18:34:12,340 - app.routers.orders - ERROR - Error creating order: 'OrderCreate' object has no attribute 'orderMethod'
+2025-02-20 18:44:21,296 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.UndefinedColumn) column "region" of relation "orders" does not exist
+LINE 1: ...hone1, phone2, order_method, full_name, offer_id, region, sh...
+                                                             ^
+
+[SQL: INSERT INTO orders (phone1, phone2, order_method, full_name, offer_id, region, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone1': '9989000000909', 'phone2': '9989000000909', 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 44, 21, 98871), 'updated_at': datetime.datetime(2025, 2, 20, 13, 44, 21, 98871)}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 18:44:21,296 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.UndefinedColumn) column "region" of relation "orders" does not exist
+LINE 1: ...hone1, phone2, order_method, full_name, offer_id, region, sh...
+                                                             ^
+
+[SQL: INSERT INTO orders (phone1, phone2, order_method, full_name, offer_id, region, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone1': '9989000000909', 'phone2': '9989000000909', 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 44, 21, 98871), 'updated_at': datetime.datetime(2025, 2, 20, 13, 44, 21, 98871)}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 18:50:25,080 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "order_no" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (30, null, 160265, 1, null, fb-leads, Test order from second db 0909, 9989000000909, 9989000000909, null, null, null, null, null, null, null, null, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:50:25, 2025-02-20 13:50:25, null).
+
+[SQL: INSERT INTO orders (phone1, phone2, order_method, full_name, offer_id, region_id, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone1': '9989000000909', 'phone2': '9989000000909', 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 50, 24, 854017), 'updated_at': datetime.datetime(2025, 2, 20, 13, 50, 24, 854017)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 18:50:25,080 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "order_no" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (30, null, 160265, 1, null, fb-leads, Test order from second db 0909, 9989000000909, 9989000000909, null, null, null, null, null, null, null, null, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:50:25, 2025-02-20 13:50:25, null).
+
+[SQL: INSERT INTO orders (phone1, phone2, order_method, full_name, offer_id, region_id, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone1': '9989000000909', 'phone2': '9989000000909', 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 50, 24, 854017), 'updated_at': datetime.datetime(2025, 2, 20, 13, 50, 24, 854017)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 18:53:50,744 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "order_no" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (31, null, 160266, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:53:51, 2025-02-20 13:53:51, null).
+
+[SQL: INSERT INTO orders (phone1, phone2, order_method, full_name, offer_id, region_id, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 53, 50, 523771), 'updated_at': datetime.datetime(2025, 2, 20, 13, 53, 50, 523771)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 18:53:50,744 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "order_no" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (31, null, 160266, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:53:51, 2025-02-20 13:53:51, null).
+
+[SQL: INSERT INTO orders (phone1, phone2, order_method, full_name, offer_id, region_id, shipping_method_id, group_id, created_at, updated_at) VALUES (%(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s) RETURNING orders.id]
+[parameters: {'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 53, 50, 523771), 'updated_at': datetime.datetime(2025, 2, 20, 13, 53, 50, 523771)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 18:54:31,263 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "sub_status_id" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (160267, 160267, 160268, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:54:31, 2025-02-20 13:54:31, null).
+
+[SQL: INSERT INTO orders (id, order_no, phone1, phone2, order_method, full_name, offer_id, region_id, shipping_method_id, group_id, created_at, updated_at) VALUES (%(id)s, %(order_no)s, %(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'id': 160267, 'order_no': '160267', 'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 54, 31, 129095), 'updated_at': datetime.datetime(2025, 2, 20, 13, 54, 31, 129095)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 18:54:31,263 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "sub_status_id" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (160267, 160267, 160268, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:54:31, 2025-02-20 13:54:31, null).
+
+[SQL: INSERT INTO orders (id, order_no, phone1, phone2, order_method, full_name, offer_id, region_id, shipping_method_id, group_id, created_at, updated_at) VALUES (%(id)s, %(order_no)s, %(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(shipping_method_id)s, %(group_id)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'id': 160267, 'order_no': '160267', 'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'shipping_method_id': 1, 'group_id': 1, 'created_at': datetime.datetime(2025, 2, 20, 13, 54, 31, 129095), 'updated_at': datetime.datetime(2025, 2, 20, 13, 54, 31, 129095)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 18:59:45,568 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "sub_status_id" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (160269, 160269, 160270, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 345000.00, 0.00, 345000.00, 250000.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:59:45, 2025-02-20 13:59:45, null).
+
+[SQL: INSERT INTO orders (id, order_no, phone1, phone2, order_method, full_name, offer_id, region_id, country_id, shipping_method_id, group_id, summ, purchase_summ, cost_ship, discount_amount, total_summ, created_at, updated_at) VALUES (%(id)s, %(order_no)s, %(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(country_id)s, %(shipping_method_id)s, %(group_id)s, %(summ)s, %(purchase_summ)s, %(cost_ship)s, %(discount_amount)s, %(total_summ)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'id': 160269, 'order_no': '160269', 'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'country_id': None, 'shipping_method_id': 1, 'group_id': 1, 'summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0.0, 'discount_amount': 0, 'total_summ': 345000.0, 'created_at': datetime.datetime(2025, 2, 20, 13, 59, 45, 436255), 'updated_at': datetime.datetime(2025, 2, 20, 13, 59, 45, 436255)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 18:59:45,568 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "sub_status_id" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (160269, 160269, 160270, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 345000.00, 0.00, 345000.00, 250000.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 13:59:45, 2025-02-20 13:59:45, null).
+
+[SQL: INSERT INTO orders (id, order_no, phone1, phone2, order_method, full_name, offer_id, region_id, country_id, shipping_method_id, group_id, summ, purchase_summ, cost_ship, discount_amount, total_summ, created_at, updated_at) VALUES (%(id)s, %(order_no)s, %(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(country_id)s, %(shipping_method_id)s, %(group_id)s, %(summ)s, %(purchase_summ)s, %(cost_ship)s, %(discount_amount)s, %(total_summ)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'id': 160269, 'order_no': '160269', 'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'country_id': None, 'shipping_method_id': 1, 'group_id': 1, 'summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0.0, 'discount_amount': 0, 'total_summ': 345000.0, 'created_at': datetime.datetime(2025, 2, 20, 13, 59, 45, 436255), 'updated_at': datetime.datetime(2025, 2, 20, 13, 59, 45, 436255)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 19:00:09,272 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "sub_status_id" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (160271, 160271, 160272, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 345000.00, 0.00, 345000.00, 250000.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 14:00:09, 2025-02-20 14:00:09, null).
+
+[SQL: INSERT INTO orders (id, order_no, phone1, phone2, order_method, full_name, offer_id, region_id, country_id, shipping_method_id, group_id, summ, purchase_summ, cost_ship, discount_amount, total_summ, created_at, updated_at) VALUES (%(id)s, %(order_no)s, %(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(country_id)s, %(shipping_method_id)s, %(group_id)s, %(summ)s, %(purchase_summ)s, %(cost_ship)s, %(discount_amount)s, %(total_summ)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'id': 160271, 'order_no': '160271', 'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'country_id': None, 'shipping_method_id': 1, 'group_id': 1, 'summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0.0, 'discount_amount': 0, 'total_summ': 345000.0, 'created_at': datetime.datetime(2025, 2, 20, 14, 0, 9, 116985), 'updated_at': datetime.datetime(2025, 2, 20, 14, 0, 9, 116985)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 19:00:09,272 - app.routers.orders - ERROR - Error creating order: (psycopg2.errors.NotNullViolation) null value in column "sub_status_id" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (160271, 160271, 160272, 1, null, fb-leads, Test order from second db 0909, 9989000000909, null, null, null, null, null, null, null, null, null, 345000.00, 0.00, 345000.00, 250000.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-20 14:00:09, 2025-02-20 14:00:09, null).
+
+[SQL: INSERT INTO orders (id, order_no, phone1, phone2, order_method, full_name, offer_id, region_id, country_id, shipping_method_id, group_id, summ, purchase_summ, cost_ship, discount_amount, total_summ, created_at, updated_at) VALUES (%(id)s, %(order_no)s, %(phone1)s, %(phone2)s, %(order_method)s, %(full_name)s, %(offer_id)s, %(region_id)s, %(country_id)s, %(shipping_method_id)s, %(group_id)s, %(summ)s, %(purchase_summ)s, %(cost_ship)s, %(discount_amount)s, %(total_summ)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'id': 160271, 'order_no': '160271', 'phone1': '9989000000909', 'phone2': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'offer_id': 431, 'region_id': None, 'country_id': None, 'shipping_method_id': 1, 'group_id': 1, 'summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0.0, 'discount_amount': 0, 'total_summ': 345000.0, 'created_at': datetime.datetime(2025, 2, 20, 14, 0, 9, 116985), 'updated_at': datetime.datetime(2025, 2, 20, 14, 0, 9, 116985)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-20 19:01:18,050 - app.routers.orders - ERROR - Error creating order: 'sub_status_id' is an invalid keyword argument for Order
+2025-02-20 19:01:18,050 - app.routers.orders - ERROR - Error creating order: 'sub_status_id' is an invalid keyword argument for Order
+2025-02-20 19:03:53,206 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:03:53,206 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:06:29,575 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:06:29,575 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:06:42,291 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:06:42,291 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:06:42,453 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:06:42,453 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:06:53,720 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:06:53,720 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:06:53,852 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:06:53,852 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:09:07,281 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:09:07,281 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:09:07,424 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:09:07,424 - app.routers.orders - ERROR - Error creating order: 'tuple' object has no attribute 'error'
+2025-02-20 19:13:54,620 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:13:54,620 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:13:55,177 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:13:55,177 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:15:53,044 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:15:53,044 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:15:53,317 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:15:53,317 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:19:12,725 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:19:12,725 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:19:12,987 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:19:12,987 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:22:48,224 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:22:48,224 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:22:48,485 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:22:48,485 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:28:00,658 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:28:00,658 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:28:00,920 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:28:00,920 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:30:37,033 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:30:37,033 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:30:37,290 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:30:37,290 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:35:17,215 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:35:17,215 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:35:17,480 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:35:17,480 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:37:23,587 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:37:23,587 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:37:23,853 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:37:23,853 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 19:51:26,710 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:51:26,710 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:51:26,981 - app.routers.orders - ERROR - Unexpected error: (psycopg2.errors.UndefinedColumn) column "comment" of relation "orders" does not exist
+LINE 1: ...ity_id, pick_up_point_id, address, sub_status_id, comment, s...
+                                                             ^
+
+[SQL: INSERT INTO orders (created_at, updated_at, order_no, group_id, manager_id, order_method, full_name, phone1, phone2, gender, city_id, pick_up_point_id, address, sub_status_id, comment, summ, total_summ, purchase_summ, cost_ship, net_cost_ship, shipping_method_id, tariff_id, tariff_code, offer_id, utm_campaign, utm_medium, utm_source, discount_amount, country_id, region_id) VALUES (%(created_at)s, %(updated_at)s, %(order_no)s, %(group_id)s, %(manager_id)s, %(order_method)s, %(full_name)s, %(phone1)s, %(phone2)s, %(gender)s, %(city_id)s, %(pick_up_point_id)s, %(address)s, %(sub_status_id)s, %(comment)s, %(summ)s, %(total_summ)s, %(purchase_summ)s, %(cost_ship)s, %(net_cost_ship)s, %(shipping_method_id)s, %(tariff_id)s, %(tariff_code)s, %(offer_id)s, %(utm_campaign)s, %(utm_medium)s, %(utm_source)s, %(discount_amount)s, %(country_id)s, %(region_id)s) RETURNING orders.id, orders."orderId"]
+[parameters: {'created_at': datetime.datetime(2025, 2, 20, 14, 51, 26, 834700), 'updated_at': datetime.datetime(2025, 2, 20, 14, 51, 26, 834700), 'order_no': '160300', 'group_id': 1, 'manager_id': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'phone1': '9989000000909', 'phone2': None, 'gender': None, 'city_id': None, 'pick_up_point_id': None, 'address': None, 'sub_status_id': 1, 'comment': None, 'summ': 345000.0, 'total_summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0, 'net_cost_ship': None, 'shipping_method_id': 1, 'tariff_id': None, 'tariff_code': None, 'offer_id': 431, 'utm_campaign': None, 'utm_medium': None, 'utm_source': None, 'discount_amount': 0, 'country_id': None, 'region_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 19:51:26,981 - app.routers.orders - ERROR - Unexpected error: (psycopg2.errors.UndefinedColumn) column "comment" of relation "orders" does not exist
+LINE 1: ...ity_id, pick_up_point_id, address, sub_status_id, comment, s...
+                                                             ^
+
+[SQL: INSERT INTO orders (created_at, updated_at, order_no, group_id, manager_id, order_method, full_name, phone1, phone2, gender, city_id, pick_up_point_id, address, sub_status_id, comment, summ, total_summ, purchase_summ, cost_ship, net_cost_ship, shipping_method_id, tariff_id, tariff_code, offer_id, utm_campaign, utm_medium, utm_source, discount_amount, country_id, region_id) VALUES (%(created_at)s, %(updated_at)s, %(order_no)s, %(group_id)s, %(manager_id)s, %(order_method)s, %(full_name)s, %(phone1)s, %(phone2)s, %(gender)s, %(city_id)s, %(pick_up_point_id)s, %(address)s, %(sub_status_id)s, %(comment)s, %(summ)s, %(total_summ)s, %(purchase_summ)s, %(cost_ship)s, %(net_cost_ship)s, %(shipping_method_id)s, %(tariff_id)s, %(tariff_code)s, %(offer_id)s, %(utm_campaign)s, %(utm_medium)s, %(utm_source)s, %(discount_amount)s, %(country_id)s, %(region_id)s) RETURNING orders.id, orders."orderId"]
+[parameters: {'created_at': datetime.datetime(2025, 2, 20, 14, 51, 26, 834700), 'updated_at': datetime.datetime(2025, 2, 20, 14, 51, 26, 834700), 'order_no': '160300', 'group_id': 1, 'manager_id': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'phone1': '9989000000909', 'phone2': None, 'gender': None, 'city_id': None, 'pick_up_point_id': None, 'address': None, 'sub_status_id': 1, 'comment': None, 'summ': 345000.0, 'total_summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0, 'net_cost_ship': None, 'shipping_method_id': 1, 'tariff_id': None, 'tariff_code': None, 'offer_id': 431, 'utm_campaign': None, 'utm_medium': None, 'utm_source': None, 'discount_amount': 0, 'country_id': None, 'region_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 19:55:06,825 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:55:06,825 - app.routers.orders - INFO - No region name provided
+2025-02-20 19:55:07,123 - app.routers.orders - ERROR - Unexpected error: (psycopg2.errors.UndefinedColumn) column "comment" of relation "orders" does not exist
+LINE 1: ...ity_id, pick_up_point_id, address, sub_status_id, comment, s...
+                                                             ^
+
+[SQL: INSERT INTO orders (created_at, updated_at, order_no, group_id, manager_id, order_method, full_name, phone1, phone2, gender, city_id, pick_up_point_id, address, sub_status_id, comment, summ, total_summ, purchase_summ, cost_ship, net_cost_ship, shipping_method_id, tariff_id, tariff_code, offer_id, utm_campaign, utm_medium, utm_source, discount_amount, country_id, region_id) VALUES (%(created_at)s, %(updated_at)s, %(order_no)s, %(group_id)s, %(manager_id)s, %(order_method)s, %(full_name)s, %(phone1)s, %(phone2)s, %(gender)s, %(city_id)s, %(pick_up_point_id)s, %(address)s, %(sub_status_id)s, %(comment)s, %(summ)s, %(total_summ)s, %(purchase_summ)s, %(cost_ship)s, %(net_cost_ship)s, %(shipping_method_id)s, %(tariff_id)s, %(tariff_code)s, %(offer_id)s, %(utm_campaign)s, %(utm_medium)s, %(utm_source)s, %(discount_amount)s, %(country_id)s, %(region_id)s) RETURNING orders.id, orders."orderId"]
+[parameters: {'created_at': datetime.datetime(2025, 2, 20, 14, 55, 6, 958743), 'updated_at': datetime.datetime(2025, 2, 20, 14, 55, 6, 958743), 'order_no': '160301', 'group_id': 1, 'manager_id': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'phone1': '9989000000909', 'phone2': None, 'gender': None, 'city_id': None, 'pick_up_point_id': None, 'address': None, 'sub_status_id': 1, 'comment': None, 'summ': 345000.0, 'total_summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0, 'net_cost_ship': None, 'shipping_method_id': 1, 'tariff_id': None, 'tariff_code': None, 'offer_id': 431, 'utm_campaign': None, 'utm_medium': None, 'utm_source': None, 'discount_amount': 0, 'country_id': None, 'region_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 19:55:07,123 - app.routers.orders - ERROR - Unexpected error: (psycopg2.errors.UndefinedColumn) column "comment" of relation "orders" does not exist
+LINE 1: ...ity_id, pick_up_point_id, address, sub_status_id, comment, s...
+                                                             ^
+
+[SQL: INSERT INTO orders (created_at, updated_at, order_no, group_id, manager_id, order_method, full_name, phone1, phone2, gender, city_id, pick_up_point_id, address, sub_status_id, comment, summ, total_summ, purchase_summ, cost_ship, net_cost_ship, shipping_method_id, tariff_id, tariff_code, offer_id, utm_campaign, utm_medium, utm_source, discount_amount, country_id, region_id) VALUES (%(created_at)s, %(updated_at)s, %(order_no)s, %(group_id)s, %(manager_id)s, %(order_method)s, %(full_name)s, %(phone1)s, %(phone2)s, %(gender)s, %(city_id)s, %(pick_up_point_id)s, %(address)s, %(sub_status_id)s, %(comment)s, %(summ)s, %(total_summ)s, %(purchase_summ)s, %(cost_ship)s, %(net_cost_ship)s, %(shipping_method_id)s, %(tariff_id)s, %(tariff_code)s, %(offer_id)s, %(utm_campaign)s, %(utm_medium)s, %(utm_source)s, %(discount_amount)s, %(country_id)s, %(region_id)s) RETURNING orders.id, orders."orderId"]
+[parameters: {'created_at': datetime.datetime(2025, 2, 20, 14, 55, 6, 958743), 'updated_at': datetime.datetime(2025, 2, 20, 14, 55, 6, 958743), 'order_no': '160301', 'group_id': 1, 'manager_id': None, 'order_method': 'fb-leads', 'full_name': 'Test order from second db 0909', 'phone1': '9989000000909', 'phone2': None, 'gender': None, 'city_id': None, 'pick_up_point_id': None, 'address': None, 'sub_status_id': 1, 'comment': None, 'summ': 345000.0, 'total_summ': 345000.0, 'purchase_summ': 250000.0, 'cost_ship': 0, 'net_cost_ship': None, 'shipping_method_id': 1, 'tariff_id': None, 'tariff_code': None, 'offer_id': 431, 'utm_campaign': None, 'utm_medium': None, 'utm_source': None, 'discount_amount': 0, 'country_id': None, 'region_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 20:07:42,892 - app.routers.orders - INFO - No region name provided
+2025-02-20 20:07:42,892 - app.routers.orders - INFO - No region name provided
+2025-02-20 20:07:43,180 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:07:43,180 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:09:04,342 - app.routers.orders - INFO - No region name provided
+2025-02-20 20:09:04,342 - app.routers.orders - INFO - No region name provided
+2025-02-20 20:09:04,620 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:09:04,620 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:11:41,515 - app.routers.orders - INFO - No region name provided
+2025-02-20 20:11:41,515 - app.routers.orders - INFO - No region name provided
+2025-02-20 20:11:41,781 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:11:41,781 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:13:20,923 - root - INFO - Root endpoint accessed
+2025-02-20 20:13:20,923 - root - INFO - Root endpoint accessed
+2025-02-20 20:19:34,568 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:19:34,568 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:19:34,777 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:19:34,777 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:24:31,263 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:24:31,263 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:24:31,463 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:24:31,463 - app.routers.orders - ERROR - Unexpected error: 'tuple' object has no attribute 'error'
+2025-02-20 20:26:51,626 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:26:51,626 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:26:51,824 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:26:51,824 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:27:34,586 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:27:34,586 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:27:34,782 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:27:34,782 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:28:24,025 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:28:24,025 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:28:24,216 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:28:24,216 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:28:51,558 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:28:51,558 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:28:51,748 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:28:51,748 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:29:08,757 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:29:08,757 - app.routers.orders - INFO - Region not found for name: Ташкентская область
+2025-02-20 20:29:08,949 - app.routers.orders - INFO - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:29:08,949 - app.routers.orders - INFO - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:29:45,816 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:29:45,816 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:29:46,008 - app.routers.orders - INFO - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:29:46,008 - app.routers.orders - INFO - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:30:01,014 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:30:01,014 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:30:01,207 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:30:01,207 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:30:20,064 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:30:20,064 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:30:20,256 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:30:20,256 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:33:58,300 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:33:58,300 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:34:24,658 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:34:24,658 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:34:24,852 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:34:24,852 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:35:07,885 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:35:07,885 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:35:08,086 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:35:08,086 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:35:23,073 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:35:23,073 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:36:01,262 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:36:01,262 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:36:09,479 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:36:09,479 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:37:33,890 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:37:33,890 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:51:41,283 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:51:41,283 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 20:51:41,475 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 20:51:41,475 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:01:25,279 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:01:25,279 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:01:25,484 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:01:25,484 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:09:01,168 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:09:01,168 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:09:01,366 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:09:01,366 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:09:23,594 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:09:23,594 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:09:24,369 - app.routers.orders - ERROR - Create order error
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 78, in sync_order_to_mysql
+    mysql_db.execute(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2088, in _execute_internal
+    statement = coercions.expect(roles.StatementRole, statement)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 413, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 638, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 631, in _text_coercion
+    return _no_text_coercion(element, argname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 601, in _no_text_coercion
+    raise exc_cls(
+sqlalchemy.exc.ArgumentError: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\routers\orders.py", line 107, in create_order
+    db.flush()  # Get order ID without committing
+    ^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 101, in save_obj
+    _finalize_insert_update_commands(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1556, in _finalize_insert_update_commands
+    mapper.dispatch.after_insert(mapper, connection, state)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\event\attr.py", line 499, in __call__
+    fn(*args, **kw)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\events.py", line 887, in wrap
+    fn(*arg, **kw)
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 40, in after_order_insert
+    sync_order_to_mysql(target, 'created')
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 94, in sync_order_to_mysql
+    logger.error(f"Error syncing order {order.id} to MySQL: {str(e)}")
+    ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'error'
+2025-02-20 22:09:24,369 - app.routers.orders - ERROR - Create order error
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 78, in sync_order_to_mysql
+    mysql_db.execute(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2088, in _execute_internal
+    statement = coercions.expect(roles.StatementRole, statement)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 413, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 638, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 631, in _text_coercion
+    return _no_text_coercion(element, argname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 601, in _no_text_coercion
+    raise exc_cls(
+sqlalchemy.exc.ArgumentError: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\routers\orders.py", line 107, in create_order
+    db.flush()  # Get order ID without committing
+    ^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 101, in save_obj
+    _finalize_insert_update_commands(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1556, in _finalize_insert_update_commands
+    mapper.dispatch.after_insert(mapper, connection, state)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\event\attr.py", line 499, in __call__
+    fn(*args, **kw)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\events.py", line 887, in wrap
+    fn(*arg, **kw)
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 40, in after_order_insert
+    sync_order_to_mysql(target, 'created')
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 94, in sync_order_to_mysql
+    logger.error(f"Error syncing order {order.id} to MySQL: {str(e)}")
+    ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'error'
+2025-02-20 22:15:46,304 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:15:46,304 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:15:46,496 - app.routers.orders - ERROR - Create order error
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 78, in sync_order_to_mysql
+    mysql_db.execute(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2088, in _execute_internal
+    statement = coercions.expect(roles.StatementRole, statement)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 413, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 638, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 631, in _text_coercion
+    return _no_text_coercion(element, argname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 601, in _no_text_coercion
+    raise exc_cls(
+sqlalchemy.exc.ArgumentError: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\routers\orders.py", line 107, in create_order
+    db.flush()  # Get order ID without committing
+    ^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 101, in save_obj
+    _finalize_insert_update_commands(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1556, in _finalize_insert_update_commands
+    mapper.dispatch.after_insert(mapper, connection, state)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\event\attr.py", line 499, in __call__
+    fn(*args, **kw)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\events.py", line 887, in wrap
+    fn(*arg, **kw)
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 40, in after_order_insert
+    sync_order_to_mysql(target, 'created')
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 94, in sync_order_to_mysql
+    logger.error(f"Error syncing order {order.id} to MySQL: {str(e)}")
+    ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'error'
+2025-02-20 22:15:46,496 - app.routers.orders - ERROR - Create order error
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 78, in sync_order_to_mysql
+    mysql_db.execute(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2088, in _execute_internal
+    statement = coercions.expect(roles.StatementRole, statement)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 413, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 638, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 631, in _text_coercion
+    return _no_text_coercion(element, argname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 601, in _no_text_coercion
+    raise exc_cls(
+sqlalchemy.exc.ArgumentError: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\routers\orders.py", line 107, in create_order
+    db.flush()  # Get order ID without committing
+    ^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 101, in save_obj
+    _finalize_insert_update_commands(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1556, in _finalize_insert_update_commands
+    mapper.dispatch.after_insert(mapper, connection, state)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\event\attr.py", line 499, in __call__
+    fn(*args, **kw)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\events.py", line 887, in wrap
+    fn(*arg, **kw)
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 40, in after_order_insert
+    sync_order_to_mysql(target, 'created')
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 94, in sync_order_to_mysql
+    logger.error(f"Error syncing order {order.id} to MySQL: {str(e)}")
+    ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'error'
+2025-02-20 22:16:16,194 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:16:16,194 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:16:16,661 - app.routers.orders - ERROR - Create order error
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 78, in sync_order_to_mysql
+    mysql_db.execute(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2088, in _execute_internal
+    statement = coercions.expect(roles.StatementRole, statement)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 413, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 638, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 631, in _text_coercion
+    return _no_text_coercion(element, argname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 601, in _no_text_coercion
+    raise exc_cls(
+sqlalchemy.exc.ArgumentError: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\routers\orders.py", line 107, in create_order
+    db.flush()  # Get the order ID without committing
+    ^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 101, in save_obj
+    _finalize_insert_update_commands(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1556, in _finalize_insert_update_commands
+    mapper.dispatch.after_insert(mapper, connection, state)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\event\attr.py", line 499, in __call__
+    fn(*args, **kw)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\events.py", line 887, in wrap
+    fn(*arg, **kw)
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 40, in after_order_insert
+    sync_order_to_mysql(target, 'created')
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 94, in sync_order_to_mysql
+    logger.error(f"Error syncing order {order.id} to MySQL: {str(e)}")
+    ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'error'
+2025-02-20 22:16:16,661 - app.routers.orders - ERROR - Create order error
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 78, in sync_order_to_mysql
+    mysql_db.execute(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2088, in _execute_internal
+    statement = coercions.expect(roles.StatementRole, statement)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 413, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 638, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 631, in _text_coercion
+    return _no_text_coercion(element, argname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\coercions.py", line 601, in _no_text_coercion
+    raise exc_cls(
+sqlalchemy.exc.ArgumentError: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\routers\orders.py", line 107, in create_order
+    db.flush()  # Get the order ID without committing
+    ^^^^^^^^^^
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 101, in save_obj
+    _finalize_insert_update_commands(
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1556, in _finalize_insert_update_commands
+    mapper.dispatch.after_insert(mapper, connection, state)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\event\attr.py", line 499, in __call__
+    fn(*args, **kw)
+  File "C:\Users\shams\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\events.py", line 887, in wrap
+    fn(*arg, **kw)
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 40, in after_order_insert
+    sync_order_to_mysql(target, 'created')
+  File "C:\Users\shams\Desktop\orders.mycpa.uz\app\core\database.py", line 94, in sync_order_to_mysql
+    logger.error(f"Error syncing order {order.id} to MySQL: {str(e)}")
+    ^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'error'
+2025-02-20 22:16:30,343 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:16:30,343 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:16:30,562 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:16:30,562 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:16:55,110 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:16:55,110 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:16:55,326 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:16:55,326 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:18:49,316 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:18:49,316 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:18:49,531 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:18:49,531 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:18:57,468 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:18:57,468 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:18:57,661 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:18:57,661 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:07,469 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:07,469 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:07,662 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:07,662 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:19,080 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:19,080 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:19,269 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:19,269 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:35,749 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:35,749 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:35,958 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:35,958 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:46,378 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:46,378 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:19:46,569 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:19:46,569 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:20:35,108 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:20:35,108 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:20:35,311 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:20:35,311 - app.routers.orders - ERROR - Create order error: 'tuple' object has no attribute 'error'
+2025-02-20 22:25:38,318 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:25:38,449 - app.core.database - ERROR - Error syncing order 75 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:25:39,046 - app.routers.orders - INFO - Order created successfully with ID: 75
+2025-02-20 22:25:39,309 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000001EAD8E33D10>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001EAD8E33D70>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001EAD8E33D70>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:25:39,368 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:34:01,113 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:34:01,252 - app.core.database - ERROR - Error syncing order 76 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:34:01,578 - app.routers.orders - INFO - Order created successfully with ID: 76
+2025-02-20 22:34:01,839 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x0000024088643BC0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000024088643A10>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000024088643A10>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:34:01,899 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:35:42,984 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:35:43,117 - app.core.database - ERROR - Error syncing order 77 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:35:43,432 - app.routers.orders - INFO - Order created successfully with ID: 77
+2025-02-20 22:35:43,687 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000001AB183D3A70>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001AB18328B60>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001AB18328B60>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:35:43,748 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:36:12,180 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:36:12,326 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:36:12,458 - app.core.database - ERROR - Error syncing order 78 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:36:12,773 - app.routers.orders - INFO - Order created successfully with ID: 78
+2025-02-20 22:36:13,032 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x0000025C276F3680>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000025C276F3F80>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000025C276F3F80>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:36:13,093 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:36:35,504 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:36:35,646 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:36:35,775 - app.core.database - ERROR - Error syncing order 79 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:36:36,092 - app.routers.orders - INFO - Order created successfully with ID: 79
+2025-02-20 22:36:36,353 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x0000022DBF6E9EB0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000022DBF6EBA10>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000022DBF6EBA10>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:36:36,417 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:37:46,217 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:37:46,376 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:37:46,506 - app.core.database - ERROR - Error syncing order 80 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:37:46,822 - app.routers.orders - INFO - Order created successfully with ID: 80
+2025-02-20 22:37:47,081 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000001E949367B30>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001E949367AD0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001E949367AD0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:37:47,141 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:38:48,600 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:38:48,756 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:38:48,900 - app.core.database - ERROR - Error syncing order 81 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:38:49,329 - app.routers.orders - INFO - Order created successfully with ID: 81
+2025-02-20 22:38:49,603 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000001E4C9987E30>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001E4C99879B0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001E4C99879B0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:38:49,669 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:42:58,140 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:42:58,282 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:42:58,417 - app.core.database - ERROR - Error syncing order 82 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:42:58,738 - app.routers.orders - INFO - Order created successfully with ID: 82
+2025-02-20 22:42:58,995 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002AC37A93DD0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002AC37A93B00>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002AC37A93B00>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:42:59,055 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:46:55,305 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:46:55,460 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:46:55,593 - app.core.database - ERROR - Error syncing order 83 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:46:55,908 - app.routers.orders - INFO - Order created successfully with ID: 83
+2025-02-20 22:46:56,162 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x0000022FEB9B4200>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000022FEB9B4830>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000022FEB9B4830>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:46:56,224 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:48:44,734 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:48:44,872 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:48:45,002 - app.core.database - ERROR - Error syncing order 84 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:48:45,313 - app.routers.orders - INFO - Order created successfully with ID: 84
+2025-02-20 22:48:45,562 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x0000022FEB9236E0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000022FEBA2E030>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x0000022FEBA2E030>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:48:45,623 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:50:31,927 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:50:31,927 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:50:32,069 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:50:32,069 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:50:32,199 - app.database - ERROR - Error syncing order 85 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:50:32,199 - app.database - ERROR - Error syncing order 85 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:50:32,517 - app.routers.orders - INFO - Order created successfully with ID: 85
+2025-02-20 22:50:32,517 - app.routers.orders - INFO - Order created successfully with ID: 85
+2025-02-20 22:50:33,049 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE573BC0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE573710>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE573710>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:50:33,049 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE573BC0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE573710>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE573710>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:50:33,109 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:50:33,109 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:50:58,046 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:50:58,046 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:50:58,172 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:50:58,172 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:50:58,296 - app.database - ERROR - Error syncing order 86 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:50:58,296 - app.database - ERROR - Error syncing order 86 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:50:58,610 - app.routers.orders - INFO - Order created successfully with ID: 86
+2025-02-20 22:50:58,610 - app.routers.orders - INFO - Order created successfully with ID: 86
+2025-02-20 22:50:58,858 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE573920>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE6192E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE6192E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:50:58,858 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE573920>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE6192E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE6192E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:50:58,918 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:50:58,918 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:51:38,905 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:51:38,905 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:51:39,034 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:51:39,034 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:51:39,161 - app.database - ERROR - Error syncing order 87 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:51:39,161 - app.database - ERROR - Error syncing order 87 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:51:39,471 - app.routers.orders - INFO - Order created successfully with ID: 87
+2025-02-20 22:51:39,471 - app.routers.orders - INFO - Order created successfully with ID: 87
+2025-02-20 22:51:39,716 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE5D6720>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE5D6090>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE5D6090>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:51:39,716 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE5D6720>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE5D6090>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE5D6090>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:51:39,777 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:51:39,777 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:54:12,068 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:54:12,068 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:54:12,203 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:54:12,203 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:54:12,332 - app.database - ERROR - Error syncing order 88 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:54:12,332 - app.database - ERROR - Error syncing order 88 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:54:12,640 - app.routers.orders - INFO - Order created successfully with ID: 88
+2025-02-20 22:54:12,640 - app.routers.orders - INFO - Order created successfully with ID: 88
+2025-02-20 22:54:12,890 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE4CBA40>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE4C9070>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE4C9070>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:54:12,890 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE4CBA40>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE4C9070>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE4C9070>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:54:12,952 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:54:12,952 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:54:48,659 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:54:48,659 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:54:48,783 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:54:48,783 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:54:48,907 - app.database - ERROR - Error syncing order 89 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:54:48,907 - app.database - ERROR - Error syncing order 89 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:54:49,221 - app.routers.orders - INFO - Order created successfully with ID: 89
+2025-02-20 22:54:49,221 - app.routers.orders - INFO - Order created successfully with ID: 89
+2025-02-20 22:54:49,467 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE631340>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE630980>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE630980>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:54:49,467 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE631340>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE630980>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE630980>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:54:49,528 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:54:49,528 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:55:42,116 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:55:42,116 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 22:55:42,243 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:55:42,243 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 22:55:42,369 - app.database - ERROR - Error syncing order 90 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:55:42,369 - app.database - ERROR - Error syncing order 90 to MySQL: Textual SQL expression '\n            INSERT INTO ...' should be explicitly declared as text('\n            INSERT INTO ...')
+2025-02-20 22:55:42,675 - app.routers.orders - INFO - Order created successfully with ID: 90
+2025-02-20 22:55:42,675 - app.routers.orders - INFO - Order created successfully with ID: 90
+2025-02-20 22:55:42,922 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE61B920>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE61A7E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE61A7E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:55:42,922 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000002E6BE61B920>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE61A7E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000002E6BE61A7E0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 22:55:42,984 - app.routers.orders - ERROR - Database error: 
+2025-02-20 22:55:42,984 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:02:36,363 - app.main - INFO - Database tables created successfully
+2025-02-20 23:02:36,374 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:02:43,336 - app.main - INFO - Database tables created successfully
+2025-02-20 23:02:43,349 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:02:43,513 - app.main - INFO - Root endpoint accessed
+2025-02-20 23:02:56,231 - app.routers.orders - INFO - Creating order: phone='string' order_method='string' full_name='string' offer_id=0 region='string' shipping_method_id=0 group_id=0 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='string', stream='string', two_plus_one='string', pay_web='string', add_manager='string', free2='string', free1='string', pick_up='string', fbs='string', k_id=0, offer_id=0) items=[OrderItemCreate(sku='string', store_id=0, store='string', product='string', article='string', buy_price='string', sell_price='string', quantity=0, img='string', product_offer_id=0)]
+2025-02-20 23:03:05,805 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 23:03:05,962 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:03:06,097 - app.core.database - ERROR - Error syncing order 91 to MySQL: 'Order' object has no attribute 'phone'
+2025-02-20 23:03:06,424 - app.routers.orders - INFO - Order created successfully with ID: 91
+2025-02-20 23:03:06,682 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x00000114E0AC1AC0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x00000114E0AC3A70>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x00000114E0AC3A70>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 23:03:06,744 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:04:27,949 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 23:04:28,080 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:04:28,206 - app.core.database - ERROR - Error syncing order 92 to MySQL: 'Order' object has no attribute 'phone'
+2025-02-20 23:04:28,601 - app.routers.orders - INFO - Order created successfully with ID: 92
+2025-02-20 23:04:28,846 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x00000114E0543680>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x00000114E09ABBF0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x00000114E09ABBF0>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 23:04:28,908 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:04:32,466 - app.main - INFO - Database tables created successfully
+2025-02-20 23:04:32,476 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:08:19,559 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None, product_offer_id=None)]
+2025-02-20 23:08:19,733 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:08:19,875 - app.core.database - ERROR - Error syncing order 93 to MySQL: 'Order' object has no attribute 'phone'
+2025-02-20 23:08:20,204 - app.routers.orders - INFO - Order created successfully with ID: 93
+2025-02-20 23:08:20,467 - app.routers.orders - ERROR - Validation error: 3 validation errors for OrderResponse
+comment
+  Field required [type=missing, input_value=<app.models.models.Order ...t at 0x000001769EFBFFB0>, input_type=Order]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer_id
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001769EF18B30>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+items.0.product_offer
+  Field required [type=missing, input_value=<app.models.models.OrderI...t at 0x000001769EF18B30>, input_type=OrderItem]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2025-02-20 23:08:20,529 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:08:24,073 - app.main - INFO - Database tables created successfully
+2025-02-20 23:08:24,088 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:12:31,318 - app.main - INFO - Database tables created successfully
+2025-02-20 23:12:31,333 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:17:43,020 - app.main - INFO - Database tables created successfully
+2025-02-20 23:17:43,037 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:27:51,730 - app.routers.orders - INFO - Creating order: phone='string' order_method='string' full_name='string' offer_id=0 region='string' shipping_method_id=0 group_id=0 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='string', stream='string', two_plus_one='string', pay_web='string', add_manager='string', free2='string', free1='string', pick_up='string', fbs='string', k_id=0, offer_id=0) items=[OrderItemCreate(sku='string', store_id=0, store='string', product='string', article='string', buy_price='string', sell_price='string', quantity=0, img='string')]
+2025-02-20 23:27:51,894 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:27:57,845 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img=None)]
+2025-02-20 23:27:57,969 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:31:04,512 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:31:04,650 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:31:43,068 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:31:43,206 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:32:31,940 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:32:32,077 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:33:56,608 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:33:56,739 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:34:24,319 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:34:24,456 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:35:31,193 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:35:31,332 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:37:23,411 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:37:23,546 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:44:51,369 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:44:51,504 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:46:20,575 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:46:20,712 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:48:20,151 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:48:20,292 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:51:06,153 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:51:06,288 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:51:16,022 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:51:16,145 - app.routers.orders - ERROR - Database error: 
+2025-02-20 23:51:54,681 - app.main - INFO - Database tables created successfully
+2025-02-20 23:51:54,686 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:52:13,908 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:52:14,062 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:52:14,186 - app.routers.orders - ERROR - Error creating order record: name 'timedelta' is not defined
+2025-02-20 23:53:56,760 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:53:56,901 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:53:57,318 - app.routers.orders - ERROR - Error creating order record: name 'timedelta' is not defined
+2025-02-20 23:54:00,897 - app.main - INFO - Database tables created successfully
+2025-02-20 23:54:00,900 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:54:03,826 - app.main - INFO - Database tables created successfully
+2025-02-20 23:54:03,829 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:54:06,736 - app.main - INFO - Database tables created successfully
+2025-02-20 23:54:06,740 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:54:09,671 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:54:09,818 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:54:11,073 - app.core.database - ERROR - Error syncing order to MySQL: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'id'
+[SQL: 
+                INSERT INTO order (
+                    id, created_at, order_no, offer_id, k_id, source, name, phone,
+                    region, order_method, summ, total_sum, purchase_sum, pay_web,
+                    two_plus_one, add_manager, fbs, cost_ship, net_cost_ship,
+                    utm_campaign, utm_medium, utm_source
+                ) VALUES (
+                    %s, %s, %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s,
+                    %s, %s, %s
+                )
+            ]
+[parameters: [{'created_at': datetime.datetime(2025, 2, 20, 23, 54, 9, 940003), 'order_no': '160414', 'offer_id': 431, 'k_id': None, 'source': 'No source', 'name':  ... (266 characters truncated) ... ', 'cost_ship': Decimal('0.0'), 'net_cost_ship': Decimal('0.00'), 'utm_campaign': 'No campaign', 'utm_medium': 'No medium', 'utm_source': 'No source'}]]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+2025-02-20 23:54:11,259 - app.routers.orders - ERROR - Error creating order record: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'id'
+2025-02-20 23:54:46,292 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:54:46,421 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:54:46,608 - app.core.database - ERROR - Error syncing order to MySQL: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'id'
+[SQL: 
+                INSERT INTO order (
+                    id, created_at, order_no, offer_id, k_id, source, name, phone,
+                    region, order_method, summ, total_sum, purchase_sum, pay_web,
+                    two_plus_one, add_manager, fbs, cost_ship, net_cost_ship,
+                    utm_campaign, utm_medium, utm_source
+                ) VALUES (
+                    %s, %s, %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s,
+                    %s, %s, %s
+                )
+            ]
+[parameters: [{'created_at': datetime.datetime(2025, 2, 20, 23, 54, 46, 543269), 'order_no': '160416', 'offer_id': 431, 'k_id': None, 'source': 'No source', 'name': ... (267 characters truncated) ... ', 'cost_ship': Decimal('0.0'), 'net_cost_ship': Decimal('0.00'), 'utm_campaign': 'No campaign', 'utm_medium': 'No medium', 'utm_source': 'No source'}]]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+2025-02-20 23:54:46,793 - app.routers.orders - ERROR - Error creating order record: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'id'
+2025-02-20 23:54:49,810 - app.main - INFO - Database tables created successfully
+2025-02-20 23:54:49,816 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:54:51,180 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:54:51,325 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:54:52,314 - app.core.database - ERROR - Error syncing order to MySQL: (MySQLdb.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order (\n                    created_at, order_no, offer_id, k_id, source, name, ' at line 1")
+[SQL: 
+                INSERT INTO order (
+                    created_at, order_no, offer_id, k_id, source, name, phone,
+                    region, order_method, summ, total_sum, purchase_sum, pay_web,
+                    two_plus_one, add_manager, fbs, cost_ship, net_cost_ship,
+                    utm_campaign, utm_medium, utm_source
+                ) VALUES (
+                    %s, %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s,
+                    %s, %s, %s
+                )
+            ]
+[parameters: (datetime.datetime(2025, 2, 20, 23, 54, 51, 446550), '160418', 431, None, 'No source', 'Test order from second db 0909', '9989000000909', None, 'fb-leads', Decimal('345000.0'), Decimal('345000.0'), Decimal('250000.0'), 0, 0, 0, 'Yoq', Decimal('0.0'), Decimal('0.00'), 'No campaign', 'No medium', 'No source')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 23:54:52,500 - app.routers.orders - ERROR - Error creating order record: (MySQLdb.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order (\n                    created_at, order_no, offer_id, k_id, source, name, ' at line 1")
+2025-02-20 23:56:06,075 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-20 23:56:06,217 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-20 23:56:06,474 - app.core.database - ERROR - Error syncing order to MySQL: (MySQLdb.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order (\n                    created_at, order_no, offer_id, k_id, source, name, ' at line 1")
+[SQL: 
+                INSERT INTO order (
+                    created_at, order_no, offer_id, k_id, source, name, phone,
+                    region, order_method, summ, total_sum, purchase_sum, pay_web,
+                    two_plus_one, add_manager, fbs, cost_ship, net_cost_ship,
+                    utm_campaign, utm_medium, utm_source
+                ) VALUES (
+                    %s, %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s,
+                    %s, %s, %s
+                )
+            ]
+[parameters: (datetime.datetime(2025, 2, 20, 23, 56, 6, 342085), '160420', 431, None, 'No source', 'Test order from second db 0909', '9989000000909', None, 'fb-leads', Decimal('345000.0'), Decimal('345000.0'), Decimal('250000.0'), 0, 0, 0, 'Yoq', Decimal('0.0'), Decimal('0.00'), 'No campaign', 'No medium', 'No source')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-02-20 23:56:06,658 - app.routers.orders - ERROR - Error creating order record: (MySQLdb.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order (\n                    created_at, order_no, offer_id, k_id, source, name, ' at line 1")
+2025-02-20 23:56:09,901 - app.main - INFO - Database tables created successfully
+2025-02-20 23:56:09,905 - app.main - INFO - API routes initialized successfully
+2025-02-20 23:57:53,872 - app.main - INFO - Database tables created successfully
+2025-02-20 23:57:53,880 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:01:52,269 - app.main - INFO - Database tables created successfully
+2025-02-21 00:01:52,273 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:03:40,371 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:03:40,538 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:03:41,534 - app.core.database - ERROR - Error syncing order to MySQL (attempt 1/3): (MySQLdb.OperationalError) (1054, "Unknown column 'created_at' in 'field list'")
+[SQL: 
+                        INSERT INTO `orders` (
+                            created_at, order_no, offer_id, k_id, source, name, phone,
+                            region, order_method, summ, total_sum, purchase_sum, pay_web,
+                            two_plus_one, add_manager, fbs, cost_ship, net_cost_ship,
+                            utm_campaign, utm_medium, utm_source
+                        ) VALUES (
+                            %s, %s, %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s,
+                            %s, %s, %s
+                        )
+                    ]
+[parameters: (datetime.datetime(2025, 2, 21, 0, 3, 40, 660229), '160422', 431, None, 'No source', 'Test order from second db 0909', '9989000000909', None, 'fb-leads', Decimal('345000.0'), Decimal('345000.0'), Decimal('250000.0'), 0, 0, 0, 'Yoq', Decimal('0.0'), Decimal('0.00'), 'No campaign', 'No medium', 'No source')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-21 00:03:41,719 - app.core.database - ERROR - Error syncing order to MySQL (attempt 2/3): (MySQLdb.OperationalError) (1054, "Unknown column 'created_at' in 'field list'")
+[SQL: 
+                        INSERT INTO `orders` (
+                            created_at, order_no, offer_id, k_id, source, name, phone,
+                            region, order_method, summ, total_sum, purchase_sum, pay_web,
+                            two_plus_one, add_manager, fbs, cost_ship, net_cost_ship,
+                            utm_campaign, utm_medium, utm_source
+                        ) VALUES (
+                            %s, %s, %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s,
+                            %s, %s, %s
+                        )
+                    ]
+[parameters: (datetime.datetime(2025, 2, 21, 0, 3, 40, 660229), '160422', 431, None, 'No source', 'Test order from second db 0909', '9989000000909', None, 'fb-leads', Decimal('345000.0'), Decimal('345000.0'), Decimal('250000.0'), 0, 0, 0, 'Yoq', Decimal('0.0'), Decimal('0.00'), 'No campaign', 'No medium', 'No source')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-21 00:03:41,903 - app.core.database - ERROR - Error syncing order to MySQL (attempt 3/3): (MySQLdb.OperationalError) (1054, "Unknown column 'created_at' in 'field list'")
+[SQL: 
+                        INSERT INTO `orders` (
+                            created_at, order_no, offer_id, k_id, source, name, phone,
+                            region, order_method, summ, total_sum, purchase_sum, pay_web,
+                            two_plus_one, add_manager, fbs, cost_ship, net_cost_ship,
+                            utm_campaign, utm_medium, utm_source
+                        ) VALUES (
+                            %s, %s, %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s,
+                            %s, %s, %s
+                        )
+                    ]
+[parameters: (datetime.datetime(2025, 2, 21, 0, 3, 40, 660229), '160422', 431, None, 'No source', 'Test order from second db 0909', '9989000000909', None, 'fb-leads', Decimal('345000.0'), Decimal('345000.0'), Decimal('250000.0'), 0, 0, 0, 'Yoq', Decimal('0.0'), Decimal('0.00'), 'No campaign', 'No medium', 'No source')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-21 00:03:42,027 - app.core.database - ERROR - Failed to sync order 98 to MySQL after 3 attempts
+2025-02-21 00:03:42,088 - app.routers.orders - ERROR - Error creating order record: (MySQLdb.OperationalError) (1054, "Unknown column 'created_at' in 'field list'")
+2025-02-21 00:03:45,952 - app.main - INFO - Database tables created successfully
+2025-02-21 00:03:45,955 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:05:22,200 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:05:22,367 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:05:23,503 - app.core.database - INFO - Order 99 created in MySQL successfully
+2025-02-21 00:05:23,505 - app.routers.orders - INFO - Created order with ID: 99, OrderID: 160425
+2025-02-21 00:05:23,507 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:05:23,508 - app.routers.orders - INFO - Added offer data for order 99
+2025-02-21 00:05:23,825 - app.routers.orders - INFO - Order 99 committed successfully
+2025-02-21 00:05:24,080 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:05:27,727 - app.main - INFO - Database tables created successfully
+2025-02-21 00:05:27,734 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:07:11,863 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:07:12,052 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:07:13,261 - app.core.database - INFO - Order 100 created in MySQL successfully
+2025-02-21 00:07:13,262 - app.routers.orders - INFO - Created order with ID: 100, OrderID: 160427
+2025-02-21 00:07:13,264 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:07:13,266 - app.routers.orders - INFO - Added offer data for order 100
+2025-02-21 00:07:13,618 - app.routers.orders - INFO - Order 100 committed successfully
+2025-02-21 00:07:13,899 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:07:17,375 - app.main - INFO - Database tables created successfully
+2025-02-21 00:07:17,381 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:08:03,684 - app.main - INFO - Database tables created successfully
+2025-02-21 00:08:03,696 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:10:15,754 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:10:15,925 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:10:17,330 - app.core.database - INFO - Order 101 created in MySQL successfully
+2025-02-21 00:10:17,333 - app.routers.orders - INFO - Created order with ID: 101, OrderID: 160429
+2025-02-21 00:10:17,335 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:10:17,336 - app.routers.orders - INFO - Added offer data for order 101
+2025-02-21 00:10:17,652 - app.routers.orders - INFO - Order 101 committed successfully
+2025-02-21 00:10:17,913 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:10:21,382 - app.main - INFO - Database tables created successfully
+2025-02-21 00:10:21,385 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:15:19,642 - app.main - INFO - Database tables created successfully
+2025-02-21 00:15:19,645 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:15:23,017 - app.main - INFO - Database tables created successfully
+2025-02-21 00:15:23,021 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:15:26,067 - app.main - INFO - Database tables created successfully
+2025-02-21 00:15:26,071 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:15:29,222 - app.main - INFO - Database tables created successfully
+2025-02-21 00:15:29,226 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:15:29,237 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:15:29,384 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:15:29,585 - app.routers.orders - INFO - Created order with ID: 102, OrderID: 160431
+2025-02-21 00:15:29,587 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:15:29,587 - app.routers.orders - INFO - Added offer data for order 102
+2025-02-21 00:15:29,914 - app.routers.orders - INFO - Order 102 committed successfully
+2025-02-21 00:15:30,182 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:20:09,222 - app.main - INFO - Database tables created successfully
+2025-02-21 00:20:09,227 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:25:31,945 - app.main - INFO - Database tables created successfully
+2025-02-21 00:25:31,947 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:25:36,391 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:25:36,541 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:25:57,780 - app.core.database - ERROR - Error syncing order to MySQL (attempt 1/3): (MySQLdb.OperationalError) (2002, "Can't connect to server on '176.124.209.127' (10060)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-02-21 00:25:58,694 - app.core.database - INFO - Order 103 created in MySQL successfully
+2025-02-21 00:25:58,696 - app.routers.orders - INFO - Created order with ID: 103, OrderID: 160433
+2025-02-21 00:25:58,698 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:25:58,699 - app.routers.orders - INFO - Added offer data for order 103
+2025-02-21 00:25:59,024 - app.routers.orders - INFO - Order 103 committed successfully
+2025-02-21 00:25:59,276 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:26:22,397 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:26:22,520 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:26:22,891 - app.core.database - INFO - Order 104 created in MySQL successfully
+2025-02-21 00:26:22,891 - app.routers.orders - INFO - Created order with ID: 104, OrderID: 160435
+2025-02-21 00:26:22,893 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:26:22,894 - app.routers.orders - INFO - Added offer data for order 104
+2025-02-21 00:26:23,201 - app.routers.orders - INFO - Order 104 committed successfully
+2025-02-21 00:26:23,449 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:34:39,812 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:34:39,947 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:34:40,323 - app.core.database - INFO - Order 105 created in MySQL successfully
+2025-02-21 00:34:40,325 - app.routers.orders - INFO - Created order with ID: 105, OrderID: 160437
+2025-02-21 00:34:40,327 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:34:40,328 - app.routers.orders - INFO - Added offer data for order 105
+2025-02-21 00:34:40,640 - app.routers.orders - INFO - Order 105 committed successfully
+2025-02-21 00:34:40,890 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:35:07,433 - app.routers.orders - INFO - Creating order: phone='9989000000909' order_method='fb-leads' full_name='Test order from second db 0909' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:35:07,560 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:35:07,932 - app.core.database - INFO - Order 106 created in MySQL successfully
+2025-02-21 00:35:07,934 - app.routers.orders - INFO - Created order with ID: 106, OrderID: 160439
+2025-02-21 00:35:07,935 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:35:07,936 - app.routers.orders - INFO - Added offer data for order 106
+2025-02-21 00:35:08,246 - app.routers.orders - INFO - Order 106 committed successfully
+2025-02-21 00:35:08,493 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:35:43,326 - app.main - INFO - Database tables created successfully
+2025-02-21 00:35:43,328 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:35:50,739 - app.main - INFO - Database tables created successfully
+2025-02-21 00:35:50,744 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:35:53,888 - app.main - INFO - Database tables created successfully
+2025-02-21 00:35:53,893 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:36:04,313 - app.routers.orders - INFO - Creating order: phone='9989000001313' order_method='fb-leads' full_name='Test order from second db 1313' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:36:04,460 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:36:05,875 - app.core.database - INFO - Order 107 created in MySQL successfully
+2025-02-21 00:36:05,876 - app.core.database - INFO - OrderItems [] created in MySQL successfully
+2025-02-21 00:36:05,877 - app.core.database - INFO - OfferData None created in MySQL successfully
+2025-02-21 00:36:05,877 - app.routers.orders - INFO - Created order with ID: 107, OrderID: 160441
+2025-02-21 00:36:05,878 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:36:05,881 - app.routers.orders - INFO - Added offer data for order 107
+2025-02-21 00:36:06,202 - app.routers.orders - INFO - Order 107 committed successfully
+2025-02-21 00:36:06,461 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:38:17,382 - app.main - INFO - Database tables created successfully
+2025-02-21 00:38:17,385 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:40:40,481 - app.main - INFO - Database tables created successfully
+2025-02-21 00:40:40,484 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:45:40,726 - app.main - INFO - Database tables created successfully
+2025-02-21 00:45:40,729 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:47:41,470 - app.main - INFO - Database tables created successfully
+2025-02-21 00:47:41,476 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:48:10,068 - app.routers.orders - INFO - Creating order: phone='9989000001313' order_method='fb-leads' full_name='Test order from second db 1313' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:48:10,221 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:48:10,411 - app.database - ERROR - Error in after_order_insert event: name 'joinedload' is not defined
+2025-02-21 00:48:10,412 - app.routers.orders - INFO - Created order with ID: 108, OrderID: 160443
+2025-02-21 00:48:10,413 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:48:10,414 - app.routers.orders - INFO - Added offer data for order 108
+2025-02-21 00:48:10,733 - app.routers.orders - INFO - Order 108 committed successfully
+2025-02-21 00:48:10,987 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:48:14,374 - app.main - INFO - Database tables created successfully
+2025-02-21 00:48:14,384 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:49:21,821 - app.routers.orders - INFO - Creating order: phone='9989000001313' order_method='fb-leads' full_name='Test order from second db 1313' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:49:21,986 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:49:22,182 - app.database - ERROR - Error in after_order_insert event: name 'joinedload' is not defined
+2025-02-21 00:49:22,182 - app.routers.orders - INFO - Created order with ID: 109, OrderID: 160445
+2025-02-21 00:49:22,185 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:49:22,185 - app.routers.orders - INFO - Added offer data for order 109
+2025-02-21 00:49:22,511 - app.routers.orders - INFO - Order 109 committed successfully
+2025-02-21 00:49:22,768 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:49:26,155 - app.main - INFO - Database tables created successfully
+2025-02-21 00:49:26,160 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:50:04,277 - app.main - INFO - Database tables created successfully
+2025-02-21 00:50:04,280 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:50:07,371 - app.main - INFO - Database tables created successfully
+2025-02-21 00:50:07,375 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:50:07,550 - app.routers.orders - INFO - Creating order: phone='9989000001313' order_method='fb-leads' full_name='Test order from second db 1313' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:50:07,690 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:50:08,477 - app.core.database - ERROR - Order 110 not found in PostgreSQL
+2025-02-21 00:50:08,539 - app.routers.orders - INFO - Created order with ID: 110, OrderID: 160447
+2025-02-21 00:50:08,540 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:50:08,541 - app.routers.orders - INFO - Added offer data for order 110
+2025-02-21 00:50:08,859 - app.routers.orders - INFO - Order 110 committed successfully
+2025-02-21 00:50:09,116 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:52:42,491 - app.main - INFO - Database tables created successfully
+2025-02-21 00:52:42,496 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:53:42,006 - app.main - INFO - Database tables created successfully
+2025-02-21 00:53:42,010 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:53:42,692 - app.routers.orders - INFO - Creating order: phone='9989000001313' order_method='fb-leads' full_name='Test order from second db 1313' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:53:42,841 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:53:43,033 - app.database - ERROR - Error in after_order_insert event: Object '<Order at 0x21170d9d100>' is already attached to session '1' (this is '2')
+2025-02-21 00:53:43,034 - app.routers.orders - INFO - Created order with ID: 111, OrderID: 160449
+2025-02-21 00:53:43,035 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:53:43,036 - app.routers.orders - INFO - Added offer data for order 111
+2025-02-21 00:53:43,348 - app.routers.orders - INFO - Order 111 committed successfully
+2025-02-21 00:53:43,603 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:54:20,295 - app.main - INFO - Database tables created successfully
+2025-02-21 00:54:20,299 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:54:25,247 - app.main - INFO - Database tables created successfully
+2025-02-21 00:54:25,250 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:54:40,723 - app.routers.orders - INFO - Creating order: phone='9989000001313' order_method='fb-leads' full_name='Test order from second db 1313' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:54:40,875 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:54:41,655 - app.database - ERROR - Order 112 not found in PostgreSQL
+2025-02-21 00:54:41,717 - app.routers.orders - INFO - Created order with ID: 112, OrderID: 160451
+2025-02-21 00:54:41,718 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:54:41,719 - app.routers.orders - INFO - Added offer data for order 112
+2025-02-21 00:54:42,034 - app.routers.orders - INFO - Order 112 committed successfully
+2025-02-21 00:54:42,292 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:54:45,463 - app.main - INFO - Database tables created successfully
+2025-02-21 00:54:45,469 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:57:00,196 - app.routers.orders - INFO - Creating order: phone='9989000001313' order_method='fb-leads' full_name='Test order from second db 1313' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:57:00,373 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:57:01,157 - app.database - ERROR - Order 113 not found in PostgreSQL
+2025-02-21 00:57:01,218 - app.routers.orders - INFO - Created order with ID: 113, OrderID: 160453
+2025-02-21 00:57:01,220 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:57:01,222 - app.routers.orders - INFO - Added offer data for order 113
+2025-02-21 00:57:01,539 - app.routers.orders - INFO - Order 113 committed successfully
+2025-02-21 00:57:01,788 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:57:05,242 - app.main - INFO - Database tables created successfully
+2025-02-21 00:57:05,245 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:57:28,247 - app.main - INFO - Database tables created successfully
+2025-02-21 00:57:28,251 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:57:48,107 - app.routers.orders - INFO - Creating order: phone='9989000001212' order_method='fb-leads' full_name='Test order from fast api 1212' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:57:48,261 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:57:48,453 - app.database - ERROR - Error in after_order_insert event: 'Order' object has no attribute 'session'
+2025-02-21 00:57:48,455 - app.routers.orders - INFO - Created order with ID: 114, OrderID: 160455
+2025-02-21 00:57:48,456 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:57:48,457 - app.routers.orders - INFO - Added offer data for order 114
+2025-02-21 00:57:48,778 - app.routers.orders - INFO - Order 114 committed successfully
+2025-02-21 00:57:49,040 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 00:59:00,223 - app.main - INFO - Database tables created successfully
+2025-02-21 00:59:00,227 - app.main - INFO - API routes initialized successfully
+2025-02-21 00:59:09,667 - app.routers.orders - INFO - Creating order: phone='9989000001212' order_method='fb-leads' full_name='Test order from fast api 1212' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 00:59:09,816 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 00:59:10,010 - app.routers.orders - INFO - Created order with ID: 115, OrderID: 160457
+2025-02-21 00:59:10,011 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 00:59:10,012 - app.routers.orders - INFO - Added offer data for order 115
+2025-02-21 00:59:12,453 - app.core.database - INFO - Order 115 created in MySQL successfully
+2025-02-21 00:59:12,454 - app.core.database - INFO - OrderItems ['svg1095'] created in MySQL successfully
+2025-02-21 00:59:12,455 - app.core.database - INFO - OfferData for order 115 created in MySQL successfully
+2025-02-21 00:59:12,702 - app.routers.orders - INFO - Order 115 committed successfully
+2025-02-21 00:59:12,964 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 01:02:44,290 - app.main - INFO - Database tables created successfully
+2025-02-21 01:02:44,293 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:03:13,352 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:03:13,499 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:03:13,692 - app.routers.orders - INFO - Created order with ID: 116, OrderID: 160459
+2025-02-21 01:03:13,694 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 01:03:13,695 - app.routers.orders - INFO - Added offer data for order 116
+2025-02-21 01:03:16,878 - app.core.database - INFO - Order 116 created in MySQL successfully
+2025-02-21 01:03:16,878 - app.core.database - INFO - OrderItems ['svg1095'] created in MySQL successfully
+2025-02-21 01:03:16,879 - app.core.database - INFO - OfferData for order 116 created in MySQL successfully
+2025-02-21 01:03:17,131 - app.routers.orders - INFO - Order 116 committed successfully
+2025-02-21 01:03:17,391 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 01:03:20,430 - app.main - INFO - Database tables created successfully
+2025-02-21 01:03:20,444 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:03:33,523 - app.main - INFO - Database tables created successfully
+2025-02-21 01:03:33,528 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:05:15,041 - app.main - INFO - Database tables created successfully
+2025-02-21 01:05:15,051 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:05:18,309 - app.main - INFO - Database tables created successfully
+2025-02-21 01:05:18,317 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:07:35,854 - app.main - INFO - Database tables created successfully
+2025-02-21 01:07:35,862 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:09:48,446 - app.main - INFO - Database tables created successfully
+2025-02-21 01:09:48,463 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:09:57,654 - app.main - INFO - Database tables created successfully
+2025-02-21 01:09:57,663 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:10:00,645 - app.main - INFO - Database tables created successfully
+2025-02-21 01:10:00,656 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:10:58,321 - app.main - INFO - Database tables created successfully
+2025-02-21 01:10:58,332 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:11:01,323 - app.main - INFO - Database tables created successfully
+2025-02-21 01:11:01,330 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:11:01,353 - app.routers.orders - ERROR - Get order error: cannot access local variable 'order' where it is not associated with a value
+2025-02-21 01:12:30,805 - app.routers.orders - ERROR - Get order error: cannot access local variable 'order' where it is not associated with a value
+2025-02-21 01:12:34,781 - app.main - INFO - Database tables created successfully
+2025-02-21 01:12:34,796 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:12:40,671 - app.main - INFO - Database tables created successfully
+2025-02-21 01:12:40,679 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:12:43,706 - app.main - INFO - Database tables created successfully
+2025-02-21 01:12:43,713 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:12:53,792 - app.main - INFO - Database tables created successfully
+2025-02-21 01:12:53,802 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:15:24,062 - app.main - INFO - Database tables created successfully
+2025-02-21 01:15:24,079 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:15:27,391 - app.main - INFO - Database tables created successfully
+2025-02-21 01:15:27,400 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:15:46,056 - app.routers.orders - ERROR - Order with ID 160458 not found
+2025-02-21 01:15:49,549 - app.main - INFO - Database tables created successfully
+2025-02-21 01:15:49,560 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:15:49,575 - app.routers.orders - INFO - Fetching order with ID: 160458
+2025-02-21 01:15:49,731 - app.routers.orders - ERROR - Order with ID 160458 not found
+2025-02-21 01:15:51,120 - app.routers.orders - INFO - Fetching order with ID: 160458
+2025-02-21 01:15:51,250 - app.routers.orders - ERROR - Order with ID 160458 not found
+2025-02-21 01:15:52,491 - app.routers.orders - INFO - Fetching order with ID: 160458
+2025-02-21 01:15:52,623 - app.routers.orders - ERROR - Order with ID 160458 not found
+2025-02-21 01:16:06,739 - app.main - INFO - Database tables created successfully
+2025-02-21 01:16:06,755 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:16:16,243 - app.routers.orders - INFO - Fetching order with ID: 160458
+2025-02-21 01:16:16,429 - app.routers.orders - ERROR - Order with ID 160458 not found
+2025-02-21 01:16:18,637 - app.routers.orders - INFO - Fetching order with ID: 160458
+2025-02-21 01:16:18,761 - app.routers.orders - ERROR - Order with ID 160458 not found
+2025-02-21 01:16:19,360 - app.routers.orders - INFO - Fetching order with ID: 160458
+2025-02-21 01:16:19,486 - app.routers.orders - ERROR - Order with ID 160458 not found
+2025-02-21 01:22:46,604 - app.main - INFO - Database tables created successfully
+2025-02-21 01:22:46,612 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:22:59,539 - app.routers.orders - INFO - Fetching order with ID: 160459
+2025-02-21 01:22:59,769 - app.routers.orders - INFO - Order 160459 retrieved successfully
+2025-02-21 01:25:09,777 - app.routers.orders - INFO - Creating order: phone='string' order_method='string' full_name='string' offer_id=0 region='string' shipping_method_id=0 group_id=0 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='string', stream='string', two_plus_one='string', pay_web='string', add_manager='string', free2='string', free1='string', pick_up='string', fbs='string', k_id=0, offer_id=0) items=[OrderItemCreate(sku='string', store_id=0, store='string', product='string', article='string', buy_price='string', sell_price='string', quantity=0, img='string')]
+2025-02-21 01:25:13,301 - app.main - INFO - Database tables created successfully
+2025-02-21 01:25:13,306 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:25:21,801 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:25:21,943 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:25:22,073 - app.routers.orders - ERROR - Error creating order record: (psycopg2.errors.NotNullViolation) null value in column "order_no" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (117, null, 160460, 1, null, fb-leads, Test order from fast api 1515, 9989000001515, null, null, 1, 1, null, null, null, 1, null, 345000.00, 0.00, 345000.00, 250000.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-21 01:25:22, 2025-02-21 01:25:22, null).
+
+2025-02-21 01:29:19,501 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:29:19,642 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:29:19,769 - app.routers.orders - ERROR - Error creating order record: (psycopg2.errors.NotNullViolation) null value in column "order_no" of relation "orders" violates not-null constraint
+DETAIL:  Failing row contains (118, null, 160461, 1, null, fb-leads, Test order from fast api 1515, 9989000001515, null, null, 1, 1, null, null, null, 1, null, 345000.00, 0.00, 345000.00, 250000.00, 0.00, 0.00, 1, null, null, 431, null, null, null, 2025-02-21 01:29:20, 2025-02-21 01:29:20, null).
+
+2025-02-21 01:29:23,204 - app.main - INFO - Database tables created successfully
+2025-02-21 01:29:23,214 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:29:25,042 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:29:25,185 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:29:25,246 - app.routers.orders - ERROR - Error creating order record: 'dict' object has no attribute 'phone'
+2025-02-21 01:29:55,663 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:29:55,810 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:29:55,872 - app.routers.orders - ERROR - Error creating order record: 'dict' object has no attribute 'phone'
+2025-02-21 01:29:59,363 - app.main - INFO - Database tables created successfully
+2025-02-21 01:29:59,372 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:30:32,551 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:30:32,702 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:30:32,765 - app.routers.orders - ERROR - Error creating order record: 'OrderCreate' object has no attribute 'get'
+2025-02-21 01:30:36,248 - app.main - INFO - Database tables created successfully
+2025-02-21 01:30:36,256 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:32:16,337 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:32:16,524 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:32:16,587 - app.routers.orders - ERROR - Error creating order record: 'OrderCreate' object is not subscriptable
+2025-02-21 01:32:19,938 - app.main - INFO - Database tables created successfully
+2025-02-21 01:32:19,944 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:32:55,991 - app.routers.orders - INFO - Creating order: phone='9989000001515' order_method='fb-leads' full_name='Test order from fast api 1515' offer_id=431 region='Андижан' shipping_method_id=1 group_id=1 cost_ship=0.0 sub_status_id=1 offer_data=OfferDataCreate(source='shamsiddin', stream='AMMxB5', two_plus_one='Yoq', pay_web='60000.00', add_manager='0.00', free2='Bor', free1='Yoq', pick_up=None, fbs='Yoq', k_id=52, offer_id=431) items=[OrderItemCreate(sku='svg1095', store_id=28, store='Smart VIP', product='Yigiladigan Kiyim Quritgich', article='svg1095', buy_price='250000.00', sell_price='345000.00', quantity=1, img='https://api.mgoods.uz/storage/p_product_images/67A0D35DB79F2E65AB7DE6A64F.jpg')]
+2025-02-21 01:32:56,145 - app.routers.orders - INFO - Found region: id=1, country_id=1
+2025-02-21 01:32:56,278 - app.routers.orders - INFO - Created order with ID: 119, OrderID: 160466
+2025-02-21 01:32:56,279 - app.routers.orders - INFO - Added order item 1: SKU=svg1095, Product=Yigiladigan Kiyim Quritgich
+2025-02-21 01:32:56,281 - app.routers.orders - INFO - Added offer data for order 119
+2025-02-21 01:32:59,736 - app.core.database - INFO - Order 119 created in MySQL successfully
+2025-02-21 01:32:59,737 - app.core.database - INFO - OrderItems ['svg1095'] created in MySQL successfully
+2025-02-21 01:32:59,737 - app.core.database - INFO - OfferData for order 119 created in MySQL successfully
+2025-02-21 01:32:59,981 - app.routers.orders - INFO - Order 119 committed successfully
+2025-02-21 01:33:00,233 - app.routers.orders - INFO - Order response validated successfully
+2025-02-21 01:33:03,426 - app.main - INFO - Database tables created successfully
+2025-02-21 01:33:03,432 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:38:05,160 - app.main - INFO - Database tables created successfully
+2025-02-21 01:38:05,171 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:41:24,502 - app.main - INFO - Database tables created successfully
+2025-02-21 01:41:24,517 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:41:28,124 - app.main - INFO - Database tables created successfully
+2025-02-21 01:41:28,138 - app.main - INFO - API routes initialized successfully
+2025-02-21 01:46:28,091 - app.main - INFO - Database tables created successfully
+2025-02-21 01:46:28,099 - app.main - INFO - API routes initialized successfully

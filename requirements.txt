@@ -3,3 +3,8 @@ uvicorn==0.24.0
 pydantic==2.5.2
 python-dotenv==1.0.0
 gunicorn==21.2.0
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+mysqlclient==2.2.1
+alembic==1.13.1
+pydantic-settings==2.1.0
